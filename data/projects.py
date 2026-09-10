@@ -1,6 +1,7 @@
 PROJECTS = [
     {
         "title": "NYC Taxi Lakehouse: End-to-End Medallion Pipeline",
+        "period": "May 2026 - June 2026",
         "category": "Data Engineering",
         "technologies": ["PySpark", "Delta Lake", "Databricks Jobs", "Streamlit"],
         "problem": (
@@ -30,6 +31,7 @@ PROJECTS = [
     },
     {
         "title": "Real-Time Customer Churn Intelligence Platform",
+        "period": "January 2026 - February 2026",
         "category": "AI & LLM",
         "technologies": ["Kafka", "AWS S3", "BigQuery", "dbt", "XGBoost", "MLflow", "Claude AI", "SHAP", "Streamlit"],
         "problem": (
@@ -272,7 +274,7 @@ EXPERIENCE = [
     {
         "role": "Business Development Analyst",
         "org": "Zycus Pvt. Ltd. - Mumbai, India",
-        "period": "June 2023 - September 2023",
+        "period": "June 2023 - May 2024",
         "technologies": [],
         "highlights": [
             "Used Excel and Salesforce for strategic outreach to 180 clients weekly",

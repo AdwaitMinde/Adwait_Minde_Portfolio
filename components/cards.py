@@ -43,7 +43,9 @@ def experience_card(exp):
 
 def project_card(project):
     with st.container(border=True):
-        st.markdown(f'<div class="category-tag">{project["category"]}</div>', unsafe_allow_html=True)
+        period = project.get("period", "")
+        period_html = f'<span style="color:var(--text-muted);font-size:0.8rem;margin-left:0.6rem;">{period}</span>' if period else ""
+        st.markdown(f'<div class="category-tag">{project["category"]}</div>{period_html}', unsafe_allow_html=True)
         st.markdown(f"### {project['title']}")
         badges(project["technologies"])
 
