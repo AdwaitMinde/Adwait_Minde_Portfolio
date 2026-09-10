@@ -69,6 +69,17 @@ def project_card(project):
             st.link_button(label, url)
 
 
+def resume_download_button(contact):
+    try:
+        with open("assets/Adwait Minde Resume.pdf", "rb") as f:
+            st.download_button(
+                "Download Resume", f, file_name="Adwait_Minde_Resume.pdf",
+                mime="application/pdf", use_container_width=True,
+            )
+    except FileNotFoundError:
+        st.link_button("Download Resume", contact["linkedin"], use_container_width=True)
+
+
 def timeline_entry(year, description):
     st.markdown(
         f"""<div class="timeline-item">

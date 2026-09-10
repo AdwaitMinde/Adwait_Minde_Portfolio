@@ -19,18 +19,8 @@ st.markdown(
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.link_button("Connect on LinkedIn", CONTACT["linkedin"], use_container_width=True, icon="\U0001F517")
+    st.link_button("Connect on LinkedIn", CONTACT["linkedin"], use_container_width=True)
 with c2:
-    st.link_button("Email Me", f"mailto:{CONTACT['email']}", use_container_width=True, icon="\U0001F4E7")
+    st.link_button("Email Me", f"mailto:{CONTACT['email']}", use_container_width=True)
 with c3:
-    try:
-        with open("assets/Adwait Minde Resume.pdf", "rb") as f:
-            st.download_button(
-                "Download Resume", f, file_name="Adwait_Minde_Resume.pdf",
-                mime="application/pdf", use_container_width=True,
-            )
-    except FileNotFoundError:
-        st.link_button("Download Resume", CONTACT["linkedin"], use_container_width=True)
-
-st.write("")
-st.caption(f"Email: {CONTACT['email']}")
+    cards.resume_download_button(CONTACT)

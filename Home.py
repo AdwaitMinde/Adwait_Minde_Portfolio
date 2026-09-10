@@ -24,18 +24,11 @@ st.markdown(
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.page_link("pages/Projects.py", label="View Projects", icon="\U0001F4C1", use_container_width=True)
+    st.link_button("View Projects", "/Projects", use_container_width=True)
 with c2:
-    try:
-        with open("assets/Adwait Minde Resume.pdf", "rb") as f:
-            st.download_button(
-                "Download Resume", f, file_name="Adwait_Minde_Resume.pdf",
-                mime="application/pdf", use_container_width=True,
-            )
-    except FileNotFoundError:
-        st.link_button("Download Resume", CONTACT["linkedin"], use_container_width=True)
+    cards.resume_download_button(CONTACT)
 with c3:
-    st.link_button("Connect on LinkedIn", CONTACT["linkedin"], use_container_width=True, icon="\U0001F517")
+    st.link_button("Connect on LinkedIn", CONTACT["linkedin"], use_container_width=True)
 
 st.write("")
 cards.section_heading("Quick Snapshot", "Real numbers from actual projects.")

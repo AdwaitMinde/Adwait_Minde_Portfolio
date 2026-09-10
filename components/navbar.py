@@ -47,23 +47,29 @@ GLOBAL_CSS = """
     .navbar-brand {
         font-weight: 700;
         font-size: 1.05rem;
-        color: var(--text-primary);
+        color: var(--text-primary) !important;
         letter-spacing: -0.01em;
+        text-decoration: none;
     }
+    .navbar-brand:hover { text-decoration: none; color: var(--text-primary) !important; }
     .navbar-brand span { color: var(--accent-cyan); }
 
-    div[data-testid="stPageLink"] a {
+    /* nav links — scoped to navbar only */
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.navbar-brand) [data-testid="stPageLink"] a {
         color: var(--text-muted) !important;
         font-size: 0.92rem;
         font-weight: 500;
         border-radius: 8px;
-        transition: all 0.15s ease;
+        background: transparent !important;
+        transition: color 0.15s ease, background 0.15s ease;
     }
-    div[data-testid="stPageLink"] a:hover {
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.navbar-brand) [data-testid="stPageLink"] a:hover {
         color: var(--text-primary) !important;
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.06) !important;
     }
-    div[data-testid="stPageLink"] p { font-size: 0.92rem !important; }
+    div[data-testid="stVerticalBlockBorderWrapper"]:has(.navbar-brand) [data-testid="stPageLink"] p {
+        font-size: 0.92rem !important;
+    }
 
     .section-heading {
         font-size: 1.7rem;
@@ -179,16 +185,21 @@ GLOBAL_CSS = """
         font-size: 0.95rem;
     }
 
-    .stButton > button, .stDownloadButton > button {
+    .stButton > button, .stDownloadButton > button,
+    [data-testid="stLinkButton"] a {
         background: linear-gradient(120deg, var(--accent-blue), var(--accent-cyan));
-        color: #06121f;
+        color: #06121f !important;
         font-weight: 600;
         border: none;
         border-radius: 10px;
         padding: 0.55rem 1.3rem;
+        text-decoration: none !important;
+        transition: filter 0.15s ease;
     }
-    .stButton > button:hover, .stDownloadButton > button:hover {
+    .stButton > button:hover, .stDownloadButton > button:hover,
+    [data-testid="stLinkButton"] a:hover {
         filter: brightness(1.08);
+        color: #06121f !important;
     }
 </style>
 """
@@ -216,7 +227,7 @@ def render():
     with st.container(border=True):
         left, *nav_cols = st.columns([2.6] + [1] * len(NAV_PAGES))
         with left:
-            st.markdown('<div class="navbar-brand">Adwait <span>Minde</span></div>', unsafe_allow_html=True)
+            st.markdown('<a href="/" target="_self" class="navbar-brand">Adwait <span>Minde</span></a>', unsafe_allow_html=True)
         for col, (path, label) in zip(nav_cols, NAV_PAGES):
             with col:
                 st.page_link(path, label=label)
