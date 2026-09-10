@@ -41,7 +41,6 @@ def project_scale_chart():
 
 
 def tech_ecosystem_graphviz():
-    """Returns a Graphviz DOT string mapping domains to the tools used within them."""
     return """
     digraph G {
         bgcolor="transparent";

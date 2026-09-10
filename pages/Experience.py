@@ -4,7 +4,7 @@ from data.projects import EXPERIENCE
 
 navbar.render()
 
-cards.section_heading("Experience", "Professional and academic experience, most recent first.")
+cards.section_heading("Experience", "Most recent first.")
 
 st.plotly_chart(charts.career_timeline_chart(EXPERIENCE), use_container_width=True, config={"displayModeBar": False})
 

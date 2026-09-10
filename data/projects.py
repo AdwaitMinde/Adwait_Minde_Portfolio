@@ -1,9 +1,3 @@
-"""
-All portfolio project data lives here so the pages stay pure UI code.
-Every metric below is pulled straight from Adwait's resume/work history -
-nothing here is invented or estimated.
-"""
-
 PROJECTS = [
     {
         "title": "NYC Taxi Lakehouse: End-to-End Medallion Pipeline",

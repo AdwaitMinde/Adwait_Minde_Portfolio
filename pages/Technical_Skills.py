@@ -4,7 +4,7 @@ from data.projects import SKILLS
 
 navbar.render()
 
-cards.section_heading("Technical Skills", "Grouped by domain rather than arbitrary proficiency scores.")
+cards.section_heading("Technical Skills", "Grouped by domain — no made-up proficiency bars.")
 
 for category, skills in SKILLS.items():
     with st.container(border=True):

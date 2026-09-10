@@ -2,7 +2,6 @@ import streamlit as st
 
 
 def flow_diagram(steps):
-    """Renders a vertical flow of pipeline steps connected by arrows."""
     for i, step in enumerate(steps):
         st.markdown(f'<div class="flow-step">{step}</div>', unsafe_allow_html=True)
         if i < len(steps) - 1:

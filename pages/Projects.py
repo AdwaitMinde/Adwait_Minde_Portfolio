@@ -4,7 +4,7 @@ from data.projects import PROJECTS, CATEGORIES
 
 navbar.render()
 
-cards.section_heading("Projects", "Filter by category to explore the stack, architecture, and results behind each build.")
+cards.section_heading("Projects", "Filter by category to see the stack, architecture, and results.")
 
 selected = st.radio("Filter", CATEGORIES, horizontal=True, label_visibility="collapsed")
 

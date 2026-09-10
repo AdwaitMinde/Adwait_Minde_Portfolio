@@ -33,7 +33,7 @@ GLOBAL_CSS = """
         max-width: 1150px;
     }
 
-    /* Top navbar - the first bordered st.container on the page */
+    /* navbar */
     div[data-testid="stVerticalBlockBorderWrapper"]:has(.navbar-brand) {
         background: rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(10px);
@@ -65,7 +65,6 @@ GLOBAL_CSS = """
     }
     div[data-testid="stPageLink"] p { font-size: 0.92rem !important; }
 
-    /* Section heading */
     .section-heading {
         font-size: 1.7rem;
         font-weight: 700;
@@ -79,7 +78,6 @@ GLOBAL_CSS = """
         margin-bottom: 1.4rem;
     }
 
-    /* Cards */
     .glass-card {
         background: var(--bg-card);
         border: 1px solid var(--border-subtle);
@@ -197,12 +195,12 @@ GLOBAL_CSS = """
 
 NAV_PAGES = [
     ("Home.py", "Home"),
-    ("pages/1_About.py", "About"),
-    ("pages/2_Experience.py", "Experience"),
-    ("pages/3_Projects.py", "Projects"),
-    ("pages/4_Technical_Skills.py", "Skills"),
-    ("pages/5_Education_Certifications.py", "Education"),
-    ("pages/6_Contact.py", "Contact"),
+    ("pages/About.py", "About"),
+    ("pages/Experience.py", "Experience"),
+    ("pages/Projects.py", "Projects"),
+    ("pages/Technical_Skills.py", "Skills"),
+    ("pages/Education.py", "Education"),
+    ("pages/Contact.py", "Contact"),
 ]
 
 

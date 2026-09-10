@@ -24,7 +24,7 @@ st.markdown(
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.page_link("pages/3_Projects.py", label="View Projects", icon="\U0001F4C1", use_container_width=True)
+    st.page_link("pages/Projects.py", label="View Projects", icon="\U0001F4C1", use_container_width=True)
 with c2:
     try:
         with open("assets/resume.pdf", "rb") as f:
@@ -38,7 +38,7 @@ with c3:
     st.link_button("Connect on LinkedIn", CONTACT["linkedin"], use_container_width=True, icon="\U0001F517")
 
 st.write("")
-cards.section_heading("Quick Snapshot", "Verified numbers pulled straight from shipped project work.")
+cards.section_heading("Quick Snapshot", "Real numbers from actual projects.")
 cards.metric_row(SNAPSHOT_METRICS, per_row=3)
 
 st.write("")
