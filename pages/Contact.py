@@ -24,7 +24,7 @@ with c2:
     st.link_button("Email Me", f"mailto:{CONTACT['email']}", use_container_width=True, icon="\U0001F4E7")
 with c3:
     try:
-        with open("assets/resume.pdf", "rb") as f:
+        with open("assets/Adwait Minde Resume.pdf", "rb") as f:
             st.download_button(
                 "Download Resume", f, file_name="Adwait_Minde_Resume.pdf",
                 mime="application/pdf", use_container_width=True,

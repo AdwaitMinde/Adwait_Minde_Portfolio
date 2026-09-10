@@ -27,7 +27,7 @@ with c1:
     st.page_link("pages/Projects.py", label="View Projects", icon="\U0001F4C1", use_container_width=True)
 with c2:
     try:
-        with open("assets/resume.pdf", "rb") as f:
+        with open("assets/Adwait Minde Resume.pdf", "rb") as f:
             st.download_button(
                 "Download Resume", f, file_name="Adwait_Minde_Resume.pdf",
                 mime="application/pdf", use_container_width=True,
